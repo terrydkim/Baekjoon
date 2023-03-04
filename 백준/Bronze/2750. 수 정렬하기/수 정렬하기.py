@@ -1,13 +1,14 @@
-n = int(input())
-nums = []
-for _ in range(n):
-    nums.append(int(input()))
+import sys
 
-# 버블정렬
-for i in range(len(nums)):
-    for j in range(len(nums)-i-1):
-        if nums[j] > nums[j+1]:
-            nums[j], nums[j+1] = nums[j+1], nums[j]
+a = int(input())
 
-for k in nums:
-    print(k)
+b = [int(sys.stdin.readline().strip()) for i in range(a)]
+
+for i in range(len(b)-1):
+    for j in range(len(b)-1):
+        if b[j] > b[j+1]:
+            b[j],b[j+1] = b[j+1],b[j]
+
+
+for i in range(len(b)):
+    print(b[i])
