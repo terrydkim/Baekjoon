@@ -1,23 +1,11 @@
 import sys
-import heapq
 input = sys.stdin.readline
 
-def heapsort(iterable):
-    h = []
-    result = []
-    for value in iterable:
-        heapq.heappush(h,value)
-    for i in range(len(h)):
-        result.append(heapq.heappop(h))
-    return result
+a = int(input())
 
-n = int(input())
-arr= []
+b = [int(input().strip()) for _ in range(a)]
 
-for i in range(n):
-    arr.append(int(input()))
+b.sort()
 
-res = heapsort(arr)
-
-for i in range(n):
-    print(res[i])
+for i in b:
+    print(i)
