@@ -1,11 +1,11 @@
 import sys
+input = sys.stdin.readline
 
-a = int(sys.stdin.readline())
+a = int(input())
 
-b = a % 4 == 0
-c = a % 100 != 0
-d = a % 400 == 0
-
-if b and( c or d):
+if a % 4==0 and (a%100 !=0 or a%400 ==0):
     print(1)
-else : print(0)
+else: print(0)
+
+
+
